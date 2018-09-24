@@ -22,6 +22,7 @@ type Obj struct {
 }
 
 func init() {
+	//自定义struct和mp必须先在gob里面注册类型
 	gob.Register(Obj{})
 	gob.Register(map[string]string{})
 }
